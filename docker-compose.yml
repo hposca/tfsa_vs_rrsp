@@ -1,6 +1,19 @@
 version: '2.2'
 
 services:
+  frontend:
+    build:
+      context: frontend/
+      dockerfile: Dockerfile
+    environment:
+      FLASK_DEBUG: 1
+    ports:
+      - 8080:80
+    volumes:
+      - ./frontend/:/usr/share/nginx/html/:ro
+    depends_on:
+      - api
+
   api:
     build:
       context: backend/

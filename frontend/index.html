@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <title>Financial Calculator</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/compare.css">
+    <script src="compare.js"></script>
+</head>
+
+<body>
+    <div id="mainform">
+        <h2>Financial Calculator</h2>
+
+        <form id="form" name="form">
+            <h3>TFSA - RRSP</h3>
+
+            <label>Deposit Amount: <span>*</span></label>
+            <input type="number" id="deposit_amount" placeholder="1000">
+            <br />
+
+            <label>Years: <span>*</span></label>
+            <input type="number" id="years" placeholder="20">
+            <br />
+
+            <label>Current Marginal Tax Rate (%):<span>*</span></label>
+            <input type="number" id="curr_marg_tax_rate" placeholder="40">
+            <br />
+
+            <label>Average Tax Rate in Retirement (%):<span>*</span></label>
+            <input type="number" id="avg_tax_rate_in_ret" placeholder="40">
+            <br />
+
+            <label>Return on Investment (%):<span>*</span></label>
+            <input type="number" id="return_on_investment" placeholder="5">
+            <br />
+
+            <label>Inflation Rate (%):<span>*</span></label>
+            <input type="number" id="inflation_rate" placeholder="3">
+            <br />
+
+            <input type="button" id="submit" value="Compare">
+        </form>
+    </div>
+    <p id="results"></p>
+</body>
+
+</html>

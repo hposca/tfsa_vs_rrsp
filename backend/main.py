@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from flask_cors import CORS
 from flask import Flask
 from flask import Response
 from flask import request
@@ -8,6 +9,7 @@ from calculations import calculations
 import json
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/')
